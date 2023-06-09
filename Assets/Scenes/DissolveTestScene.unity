@@ -564,7 +564,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e52de72009f0443b2e7c92a110b3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   MeshRenderers: []
+  dissolveVFXs: []
 --- !u!1001 &3502510018990971092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -572,6 +574,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3502510018990971094, guid: b04000763cb1b4646b0c164f2c12e373, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3968184964090841554, guid: b04000763cb1b4646b0c164f2c12e373, type: 3}
       propertyPath: m_RootOrder
       value: 2

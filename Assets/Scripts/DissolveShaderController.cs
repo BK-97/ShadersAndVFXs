@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class DissolveShaderController : MonoBehaviour
 {
+    public Animator animator;
+
     public List<Renderer> MeshRenderers;
     private List<Material> _materials=new List<Material>();
     private float refreshRate=0.025f;
     private float dissolveRate=0.0125f;
     private bool isDissolving;
     private bool dissolved;
+    public List<VisualEffect> dissolveVFXs;
     private void Awake()
     {
         SetRenderers(transform);
@@ -62,6 +66,18 @@ public class DissolveShaderController : MonoBehaviour
     }
     IEnumerator DissolveCO()
     {
+        if (dissolveVFXs.Count != 0)
+        {
+            for (int i = 0; i < dissolveVFXs.Count; i++)
+            {
+                dissolveVFXs[i].Play();
+            }
+        }
+        if (animator != null)
+        {
+            animator.applyRootMotion = true;
+            animator.SetTrigger("Die");
+        }
         if (_materials.Count > 0)
         {
             isDissolving = true;
@@ -81,21 +97,24 @@ public class DissolveShaderController : MonoBehaviour
     }
     IEnumerator UnDissolveCO()
     {
-        if (_materials.Count > 0)
+        if (animator == null)
         {
-            isDissolving = true;
-            float counter = 1;
-            while (_materials[0].GetFloat("_Dissolve") > 0)
+            if (_materials.Count > 0)
             {
-                counter -= dissolveRate;
-                for (int i = 0; i < _materials.Count; i++)
+                isDissolving = true;
+                float counter = 1;
+                while (_materials[0].GetFloat("_Dissolve") > 0)
                 {
-                    _materials[i].SetFloat("_Dissolve", counter);
+                    counter -= dissolveRate;
+                    for (int i = 0; i < _materials.Count; i++)
+                    {
+                        _materials[i].SetFloat("_Dissolve", counter);
+                    }
+                    yield return new WaitForSeconds(refreshRate);
                 }
-                yield return new WaitForSeconds(refreshRate);
+                dissolved = false;
+                isDissolving = false;
             }
-            dissolved = false;
-            isDissolving = false;
         }
     }
 }
