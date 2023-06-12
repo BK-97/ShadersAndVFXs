@@ -60,12 +60,11 @@ public class DissolveShaderController : MonoBehaviour
 
     private void VFXPlay()
     {
-        Debug.Log("Test");
         if (dissolveVFXs.Count != 0)
         {
             for (int i = 0; i < dissolveVFXs.Count; i++)
             {
-                dissolveVFXs[i].Play();
+                dissolveVFXs[i].gameObject.SetActive(true);
             }
         }
 

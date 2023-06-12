@@ -134,10 +134,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CapsuleDissolve
       objectReference: {fileID: 0}
-    - target: {fileID: 2270087857789489890, guid: 7550a492a4f63504f84b11ead3e4856b, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2270087857789489917, guid: 7550a492a4f63504f84b11ead3e4856b, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -181,10 +177,6 @@ PrefabInstance:
     - target: {fileID: 2270087857789489917, guid: 7550a492a4f63504f84b11ead3e4856b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2270087857789489919, guid: 7550a492a4f63504f84b11ead3e4856b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7550a492a4f63504f84b11ead3e4856b, type: 3}
@@ -293,33 +285,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 98268631, guid: 212551bd99fa3734ea3e7e6142d9190d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 98268635, guid: 212551bd99fa3734ea3e7e6142d9190d, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1050741899, guid: 212551bd99fa3734ea3e7e6142d9190d, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1518517788, guid: 212551bd99fa3734ea3e7e6142d9190d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1518517792, guid: 212551bd99fa3734ea3e7e6142d9190d, type: 3}
-      propertyPath: m_Enabled
+    - target: {fileID: 98268634, guid: 212551bd99fa3734ea3e7e6142d9190d, type: 3}
+      propertyPath: m_Bindings.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3793412751914044707, guid: 212551bd99fa3734ea3e7e6142d9190d, type: 3}
       propertyPath: m_Name
       value: BruteDissolve
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793412751914044707, guid: 212551bd99fa3734ea3e7e6142d9190d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4606962929713436569, guid: 212551bd99fa3734ea3e7e6142d9190d, type: 3}
       propertyPath: m_RootOrder
