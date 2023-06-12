@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HologramTestScene.unity
+    guid: 117adb27c0829af48b72e9ea4649683c
   m_configObjects: {}

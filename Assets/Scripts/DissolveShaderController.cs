@@ -8,13 +8,13 @@ public class DissolveShaderController : MonoBehaviour
     public Animator animator;
 
     public List<Renderer> MeshRenderers;
-    private List<Material> _materials=new List<Material>();
-    private float refreshRate=0.025f;
-    private float dissolveRate=0.0125f;
+    private List<Material> _materials = new List<Material>();
+    private float refreshRate = 0.025f;
+    private float dissolveRate = 0.0125f;
     private bool isDissolving;
     private bool dissolved;
     public List<VisualEffect> dissolveVFXs;
-    private void Awake()
+    private void Start()
     {
         SetRenderers(transform);
         SetMats();
@@ -46,9 +46,7 @@ public class DissolveShaderController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (dissolved)
-                UnDissolve();
-            else
+            if(!dissolved)
                 Dissolve();
         }
     }
@@ -56,16 +54,13 @@ public class DissolveShaderController : MonoBehaviour
     {
         if (isDissolving)
             return;
+        VFXPlay();
         StartCoroutine(DissolveCO());
     }
-    public void UnDissolve()
+
+    private void VFXPlay()
     {
-        if (isDissolving)
-            return;
-        StartCoroutine(UnDissolveCO());
-    }
-    IEnumerator DissolveCO()
-    {
+        Debug.Log("Test");
         if (dissolveVFXs.Count != 0)
         {
             for (int i = 0; i < dissolveVFXs.Count; i++)
@@ -73,6 +68,11 @@ public class DissolveShaderController : MonoBehaviour
                 dissolveVFXs[i].Play();
             }
         }
+
+    }
+    IEnumerator DissolveCO()
+    {
+
         if (animator != null)
         {
             animator.applyRootMotion = true;
@@ -87,7 +87,7 @@ public class DissolveShaderController : MonoBehaviour
                 counter += dissolveRate;
                 for (int i = 0; i < _materials.Count; i++)
                 {
-                    _materials[i].SetFloat("_Dissolve",counter);
+                    _materials[i].SetFloat("_Dissolve", counter);
                 }
                 yield return new WaitForSeconds(refreshRate);
             }
