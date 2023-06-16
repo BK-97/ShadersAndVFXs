@@ -16,6 +16,10 @@ Water Shader
 
 ![WaterShader](https://github.com/BK-97/ShadersAndVFXs/assets/59361739/b09614d7-4e67-4096-9fad-30912e66b7d2)
 
+Stylized Water Shader
+
+![StylizedWaterShader](https://github.com/BK-97/ShadersAndVFXs/assets/59361739/b8709d4c-6dd8-4db0-bfdb-3c53b5b87f40)
+
 
 Gradient Shader
 
