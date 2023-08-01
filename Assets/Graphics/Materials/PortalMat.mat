@@ -7,14 +7,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GradientDissolve
-  m_Shader: {fileID: -6465566751694194690, guid: e3770a2400844b447949389ac64a8aac, type: 3}
+  m_Name: PortalMat
+  m_Shader: {fileID: -6465566751694194690, guid: 1ebdd42373eca5d44a80edac2e33a413, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2425
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -25,7 +25,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseTexture:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3042b019b052942a1baf7aa49d7ca6bb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -49,14 +49,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 39f1b49a0751c2c4484cc2e3cbafadbc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NormalTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -86,6 +82,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - Vector1_ea440a03db96485e85275973f7eb77f2: 2.4
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -93,52 +90,43 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
-    - _CuttOfHeight: 2.48
-    - _CuttOffHeight: 1
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _Dissolve: 0
-    - _DissolveFade: 2
-    - _DissolveWidth: 2
+    - _Direction: -1
     - _DstBlend: 0
-    - _EdgeWidth: 0.05
     - _EnvironmentReflections: 1
-    - _Float: 2.27
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Glow_Thickness: 0.05
+    - _Height: 8
     - _Metallic: 0
-    - _NoiseScale: 30
-    - _NoiseStrenght: 1
-    - _NormalStrenght: 0.5
+    - _NoiseScale: 21.48
+    - _NoiseStrength: 0.13
     - _OcclusionStrength: 1
+    - _Opacity: 1
     - _Parallax: 0.005
     - _QueueControl: 0
-    - _QueueOffset: -25
+    - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Speed: 0.01
     - _SrcBlend: 1
+    - _Strength: 10
     - _Surface: 0
-    - _Vertical: 0
+    - _Width: 4
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _test: -0.21
     m_Colors:
-    - _BaseColor: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
-    - _Bottom_Color: {r: 1, g: 0, b: 0, a: 0}
+    - _BaseColor: {r: 0.9433962, g: 0.35154858, b: 0.35154858, a: 1}
+    - _BottomColor: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DissolveColor: {r: 1, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _GlowColor: {r: 1, g: 0.9333334, b: 0, a: 1}
-    - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Top_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _TopColor: {r: 0.9433962, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &8996952363023122105
+--- !u!114 &443513841978359924
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
