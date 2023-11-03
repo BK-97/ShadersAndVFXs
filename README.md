@@ -43,7 +43,15 @@ Toon Shader
 
 ![ezgif com-video-to-gif (5)](https://github.com/BK-97/ShadersAndVFXs/assets/59361739/9cf049b5-498a-4b7e-9198-ef91e618e605)
 
+---
+#ComputeShaders
 
+WaveCompute
+
+![ezgif com-video-to-gif (8)](https://github.com/BK-97/ShadersAndVFXs/assets/59361739/5ace99ae-8caa-4510-add6-b52bf6fbb346)
+
+
+---
 #VFX:
 
 ---
